@@ -18,7 +18,7 @@ venv/
 Thumbs.db
 
 # images / icons
-frontend/icons
+# frontend/icons
 
 # tests
 tests
