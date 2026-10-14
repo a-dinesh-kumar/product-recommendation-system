@@ -20,7 +20,6 @@ A semantic product discovery application that finds products similar to a user's
 - [Testing checklist](#testing-checklist)
 - [Known limitations](#known-limitations)
 - [Future enhancements](#future-enhancements)
-- [GitHub setup and commands](#github-setup-and-commands)
 - [Author](#author)
 
 ## Overview
@@ -306,14 +305,14 @@ The UI should display available metadata such as title, category, brand, price, 
 - Deploy the application and add the live URL after verifying deployment.
 
 ---
-### 👨‍💻 Author
+## Author
 
 **Dinesh Kumar Alagarsamy**  
 *Software Quality Engineer / SDET*
 -   GitHub: https://github.com/a-dinesh-kumar
 -   LinkedIn: https://www.linkedin.com/in/dinesh-kumar-alagarsamy
 
-#### Areas of Interest:
+### Areas of Interest:
 * Quality Engineering
 * Test Automation
 * API Testing
