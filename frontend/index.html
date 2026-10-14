@@ -1,0 +1,133 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#f8faf9">
+    <title>ProductMatch | Product Similarity Search</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <script src="/static/app.js" defer></script>
+</head>
+<body>
+    <div class="app-shell">
+        <header class="topbar">
+            
+            <a class="brand" href="/" aria-label="Product Similarity Search home">
+                <span class="brand-mark" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="1.8"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="3" y="4" width="12" height="15" rx="2"></rect>
+                        <path d="M7 8h4M7 11h4"></path>
+                        <circle cx="16.5" cy="15.5" r="4"></circle>
+                        <path d="m19.5 18.5 2 2"></path>
+                    </svg>
+                </span>
+                <span>
+                    <strong>Product Similarity Search</strong>
+                    <small>Semantic product discovery</small>
+                </span>
+            </a>
+
+
+            <nav class="social-links" aria-label="Social profiles">
+                <a href="https://github.com/a-dinesh-kumar"
+                   target="_blank" rel="noopener noreferrer"
+                   title="GitHub" aria-label="Visit my GitHub profile">
+                    <img src="/static/icons/github.png" alt="GitHub">
+                </a>
+                <a href="https://www.linkedin.com/in/dinesh-kumar-alagarsamy/"
+                   target="_blank" rel="noopener noreferrer"
+                   title="LinkedIn" aria-label="Visit my LinkedIn profile">
+                    <img src="/static/icons/linkedin.png" alt="LinkedIn">
+                </a>
+            </nav>
+        </header>
+
+        <main>
+            <section class="hero">
+                <span class="eyebrow">SEMANTIC PRODUCT DISCOVERY</span>
+                <h1>Find products that<br> <span>match your needs.</span></h1>
+                <p>
+                    Describe a product in your own words.
+                    Discover similar items ranked by semantic similarity.
+                </p>
+            </section>
+
+            <section class="search-panel" aria-label="Product search">
+                <form id="searchForm">
+                    <label for="query">What are you looking for?</label>
+
+                    <div class="search-row">
+                        <input
+                            id="query"
+                            name="query"
+                            type="text"
+                            placeholder="e.g. lightweight running shoes for daily use"
+                            autocomplete="off"
+                            required
+                            minlength="2"
+                        >
+                        <button id="searchBtn" type="submit">
+                            <span>Find matches</span>
+                            <span aria-hidden="true">→</span>
+                        </button>
+                    </div>
+
+                    <div class="search-options">
+                        <p>Search using a product name or description</p>
+                        <label class="top-n-control" for="topN">
+                            Show
+                            <select id="topN" name="topN">
+                                <option value="4">4 products</option>
+                                <option value="5" selected>5 products</option>
+                                <option value="8">8 products</option>
+                                <option value="10">10 products</option>
+                                <option value="12">12 products</option>
+                                <option value="20">20 products</option>
+                            </select>
+                        </label>
+                    </div>
+                </form>
+            </section>
+
+            <div id="statusMessage" class="status-message"
+                 role="status" aria-live="polite" hidden></div>
+
+            <section id="featuredSection" class="product-section">
+                <div class="section-heading">
+                    <div>
+                        <span class="eyebrow">EXPLORE THE CATALOGUE</span>
+                        <h2>Products to explore</h2>
+                        <p>A small preview from the product catalogue.</p>
+                    </div>
+                    <!-- <span class="section-note">Before you search</span> -->
+                </div>
+
+                <div id="featuredGrid" class="product-grid">
+                    <div class="loading-card">Loading featured products…</div>
+                </div>
+            </section>
+
+            <section id="resultsSection" class="product-section" hidden>
+                <div class="section-heading">
+                    <div>
+                        <span class="eyebrow">YOUR SEARCH RESULTS</span>
+                        <h2>Recommended products</h2>
+                        <p id="resultsDescription"></p>
+                    </div>
+                    <span id="modelBadge" class="model-badge">Model</span>
+                </div>
+
+                <div id="resultsGrid" class="product-grid"></div>
+            </section>
+        </main>
+
+        <footer>
+            <span>Product Similarity Search</span>
+            <span>Word2Vec · FastText · Cosine similarity</span>
+        </footer>
+    </div>
+</body>
+</html>

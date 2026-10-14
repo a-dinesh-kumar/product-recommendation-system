@@ -1,0 +1,20 @@
+{
+    "model_name": "word2vec_skipgram",
+    "algorithm": "Word2Vec Skip-Gram",
+    "training_product_count": 70000,
+    "vector_size": 100,
+    "window": 5,
+    "min_count": 1,
+    "epochs": 20,
+    "seed": 42,
+    "workers": 1,
+    "tokenization": "\\b\\w+\\b",
+    "input_text": "name_clean",
+    "document_vector_method": "mean of word vectors",
+    "document_vectors_normalized": true,
+    "similarity": "cosine similarity via dot product",
+    "product_id_column": "product_id",
+    "catalogue_file": "production_catalogue.csv",
+    "vectors_file": "product_vectors.npy",
+    "model_file": "word2vec_skipgram_full.model"
+}

@@ -1,0 +1,14 @@
+{
+    "strategy": "Word2Vec Skip-Gram with FastText fallback",
+    "catalogue_file": "production_catalogue.csv",
+    "word2vec_model_file": "word2vec_skipgram_full.model",
+    "word2vec_vectors_file": "product_vectors.npy",
+    "fasttext_model_file": "fasttext_full.model",
+    "fasttext_vectors_file": "fasttext_product_vectors.npy",
+    "vector_size": 100,
+    "similarity": "cosine similarity",
+    "query_text_field": "name_clean",
+    "known_words_route": "word2vec_skipgram",
+    "unknown_words_route": "fasttext",
+    "oov_policy": "Use FastText if any query token is absent from the Word2Vec vocabulary, or if the Word2Vec query vector is zero."
+}
