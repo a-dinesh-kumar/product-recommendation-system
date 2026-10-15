@@ -4,6 +4,10 @@ A semantic product discovery application that finds products similar to a user's
 
 > **Project status:** Local API and frontend integration are in progress. Confirm endpoint response fields, dataset columns, tests, and deployment status before describing the project as production-ready.
 
+## 🚀 Live Demo
+
+https://product-recommendation-system-g54l.onrender.com/
+
 ## Table of contents
 
 - [Overview](#overview)
